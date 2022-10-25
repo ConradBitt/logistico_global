@@ -4,7 +4,8 @@
 
 FILE *arq;
 
-#define N 500
+#define N 10
+
 #define max 0.9
 #define min 0.1
 
@@ -24,7 +25,7 @@ int main()
     mi[i]=3.98;
  }
 
- for(n=1;n<=5000;n++){
+ for(n=1;n<=1000;n++){
     
      for(i=1;i<=N;i++)
          xv[i]=xn[i];
@@ -35,8 +36,11 @@ int main()
       
      for(i=1;i<=N;i=i+1){
          xn[i]=(1.0-e)*mapa(xv[i],mi[i])+(e/N)*soma;
-         if(n>4900) 
-             fprintf(arq,"%d \t %f\n",i,xn[i]);
+         
+         if(n>900) 
+             fprintf(arq,"%d \t %f \n",i, xn[i]);
+                 
+         
       }
    }
 

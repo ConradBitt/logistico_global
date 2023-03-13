@@ -12,10 +12,10 @@ void network(double xout[], double x[], double sigma, int p);
 
 int main(){
 
-    int tf = 3000; // Número total de iterações
-    int trans = tf - 2000; // Transiente
+    int tf = 6000; // Número total de iterações
+    int trans = tf - 3000; // Transiente
     int sample_size = tf - trans; // Tamanho
-    double sigma = 0.8; // Intensidade do acoplamento
+    double sigma = 0.2; // Intensidade do acoplamento
     double r = 0.35; // Raio do acoplamento
     int p = n*r; // Número de vizinhos acoplados
     double x[n], xout[n]; // Variáveis da rede
